@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function TestScore(name, kor, eng) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+
+            this.get_test_info = function() {
+                document.write("이름: " + this.name, "<br>");
+                document.write("국어: " + this.kor.toString(), "<br>");
+                document.write("영어: " + this.eng.toString(), "<br>");
+            };
+
+            this.get_average = function () {
+                return (this.kor + this.eng) / 2;
+            };
+        }
+
+        let kim = new TestScore("kim", 80, 90);
+        let lee = new TestScore("lee", 100, 80);
+
+        kim.get_test_info();
+        document.write("평균 점수: " + kim.get_average().toString(), "<br>");
+
+        document.write("<hr>")
+
+        lee.get_test_info();
+        document.write("평균 점수: " + lee.get_average().toString(), "<br>");
+
+    </script>
+</body>
+</html>

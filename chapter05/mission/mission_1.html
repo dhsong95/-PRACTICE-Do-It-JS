@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="the-body">
+    <script>
+        function change_color() {
+            let colors = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+            let selected = Math.floor(Math.random() * colors.length);
+            let body_tag = document.getElementById("the-body");
+            body_tag.style.backgroundColor = colors[selected];
+        }
+    </script>
+    <button onclick="change_color()">배경 색상 바꾸기</button>
+</body>
+</html>
