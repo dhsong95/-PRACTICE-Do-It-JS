@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".btn1.on").on("mouseover focus", function() {
+                alert("HELLO");
+            });
+            $(".btn1").addClass("on");
+
+            $(document).on("mouseover focus", ".btn2.on", function() {
+                alert("WELCOME");
+            });
+            $(".btn2").addClass("on");
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn1">버튼 1</button></p>
+        <p><button class="btn2">버튼 2</button></p>
+    </div>
+</body>
+</html>

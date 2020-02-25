@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $( function() {
+            $("#uid_1, #upw_1").on("focus", function() {
+                $(this).css("background-color", "coral");
+            });
+
+            $("#uid_1, #upw_1").on("blur", function() {
+                $(this).css("background-color", "white");
+            });
+
+            $("#form_2").on("focusin", function () {
+                $(this).css("background-color", "coral");
+            });
+
+            $("#form_2").on("focusout", function() {
+                $(this).css("background-color", "white");
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>focus/blur</h1>
+    <form action="#" method="get">
+        <p>
+            <label for="uid_1">ID</label>
+            <input type="text" id="uid_1" name="uid_1">
+        </p>
+        <p>
+            <label for="upw_1">PW</label>
+            <input type="password" id="upw_1" name="upw_1">
+        </p>
+    </form>
+
+    <h1>focusin/focusout</h1>
+    <form action="#" method="get" id="form_2">
+        <p>
+            <label for="uid_2">ID</label>
+            <input type="text" id="uid_2" name="uid_2">
+        </p>
+        <p>
+            <label for="upw_2">PW</label>
+            <input type="password" id="upw_2" name="upw_2">
+        </p>
+    </form>
+</body>
+</html>

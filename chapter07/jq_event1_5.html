@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $( function() {
+            $(".btn1").click(function (e) {
+                e.preventDefault();
+                $(".txt1").css("background-color", "yellow");
+            });
+
+            $(".btn2").on("click", function() {
+               $(".txt2").css("background-color", "yellow");
+               return false;
+            });
+
+            $(".btn3").on("dblclick", function() {
+                $(".txt3").css("background-color", "green");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><a href="https://www.google.com" class="btn1">버튼 1</a></p>
+    <p class="txt1">내용 1</p>
+    <p><a href="https://www.google.com" class="btn2">버튼 2</a></p>
+    <p class="txt2">내용 2</p>
+    <p><button class="btn3">버튼 3</button></p>
+    <p class="txt3">내용 3</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <style>
+        body {
+            height: 10000px;
+            width: 5000px;
+        }
+        #wrap {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $( function() {
+            $(document).on("scroll", function() {
+                $(".top").text($(this).scrollTop());
+                $(".left").text($(this).scrollLeft());
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>scrollTop: <span class="top"></span></p>
+        <p>scrollLeft: <span class="left"></span></p>
+    </div>
+</body>
+</html>
