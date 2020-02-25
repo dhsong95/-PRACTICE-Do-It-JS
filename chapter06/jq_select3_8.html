@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            line-height: 1;
+        }
+        #wrap {
+            height: 5000px;
+            padding-top: 2000px;
+        }
+
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            let top_num = $("#wrap h1").offset().top;
+            $(window).scrollTop(top_num);
+
+            let sct = $(window).scrollTop();
+            console.log(sct);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+</body>
+</html>

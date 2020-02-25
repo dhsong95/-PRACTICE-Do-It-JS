@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $("h2").replaceWith("<h2>replace method</h2>");
+            $("<p>Change</p>").replaceAll("p");
+        });
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <h2>제목 1</h2>
+        <p>내용 1</p>
+        <p>내용 2</p>
+    </div>
+    <div class="box2">
+        <h2>제목 2</h2>
+        <p>내용 3</p>
+        <p>내용 4</p>
+    </div>
+</body>
+</html>

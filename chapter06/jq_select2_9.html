@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            let arr1 = ["서울", "대전", "부산", "전주"];
+            let arr2 = ["한국", "미국", "일본", "중국"];
+            let obj = {
+                "name": "정부장",
+                "area": "서울"
+            };
+
+            let id_num = $.inArray("부산", arr1);
+            console.log(id_num);
+
+            let is_array1 = $.isArray(arr1);
+            let is_array2 = $.isArray(obj);
+            console.log(is_array1);
+            console.log(is_array2);
+
+            $.merge(arr1, arr2);
+            console.log(arr1);
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

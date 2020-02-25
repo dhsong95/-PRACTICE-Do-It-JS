@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            let copy_obj = $(".box1").children().clone();
+
+            $(".box2").remove();
+
+            $(".box3").empty();
+            $(".box3").append(copy_obj);
+        });
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <p>내용 1</p>
+        <p>내용 2</p>
+    </div>
+    <div class="box2">
+        <p>내용 3</p>
+        <p>내용 4</p>
+    </div>
+    <div class="box3">
+        <p>내용 5</p>
+        <p>내용 6</p>
+    </div>
+</body>
+</html>

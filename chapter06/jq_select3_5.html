@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            let res1 = $("#check1").prop("checked");
+            console.log(res1);
+
+            let res2 = $("#check2").prop("checked");
+            console.log(res2);
+
+            $("#check3").prop("checked", true);
+
+            let res3 = $("#select_1").prop("selectedIndex");
+            console.log(res3);
+        });
+    </script>
+</head>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" method="get">
+        <p>
+            <input type="checkbox" name="check" value="1" id="check1">
+            <label for="check1">check1</label>
+            <input type="checkbox" name="check" value="2" id="check2" checked>
+            <label for="check2">check2</label>
+            <input type="checkbox" name="check" value="3" id="check3">
+            <label for="check3">check3</label>
+        </p>
+        <p>
+            <select name="select_1" id="select_1">
+                <option value="option1">option1</option>
+                <option value="option2">option2</option>
+                <option value="option3" selected>option3</option>
+            </select>
+        </p>
+    </form>
+</body>
+</html>
