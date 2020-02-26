@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>효과와 애니메이션</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .txt1 {
+            width: 50px;
+            text-align: center;
+            background-color: azure;
+        }
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".txt1")
+            .animate({
+                marginLeft: "200px"
+            }, 1000)
+            .animate({
+                marginTop: "200px"
+            }, 1000)
+            .queue(function () {
+                $(this).css("background-color", "aqua");
+                $(this).dequeue(); // dequeue() 함수가 없는 경우 아래에 있는 animate()가 실행되지 않음
+            })
+            .animate({
+                marginLeft: "0px"
+            }, 1000)
+            .animate({
+                marginTop: "0px"
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <p class="txt1">내용 1</p>
+</body>
+</html>

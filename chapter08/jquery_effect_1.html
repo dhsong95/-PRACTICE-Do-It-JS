@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .content {
+            width: 400px;
+            background-color: beige;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>효과와 애니메이션</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".btn1").on("click", function() {
+                $(".box").slideUp(1000, "linear", function() {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function () {
+                $(".box").fadeIn(1000, "swing", function () {
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+
+            $(".btn3").on("click", function () {
+                $(".box").slideToggle(1000, "linear");
+            });
+
+            $(".btn4").on("click", function () {
+                $(".box").fadeTo("fast", 0.3);
+            });
+
+            $(".btn5").on("click", function () {
+                $(".box").fadeTo("fast", 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="btn1">Slide Up</button>
+        <button class="btn2">Fade In</button>
+    </p>
+    <p>
+        <button class="btn3">Toggle Slide</button>
+    </p>
+    <p>
+        <button class="btn4">Fade To(0.3)</button>
+        <button class="btn5">Fade To(1)</button>
+    </p>
+
+    <div class="box">
+        <div class="content">
+            The Cabinet of Dr. Caligari is a German silent horror film, first released on 26 February 1920.
+            It was directed by Robert Wiene and written by Hans Janowitz and Carl Mayer.
+            Considered the quintessential work of German Expressionist cinema, it tells the story of an insane hypnotist (Werner Krauss) who uses a somnambulist (Conrad Veidt) to commit murders.
+            The film features a dark and twisted visual style.
+            The sets have sharp-pointed forms, oblique and curving lines, and structures that lean and twist in unusual angles.
+            The film's design team, Hermann Warm, Walter Reimann and Walter Röhrig, recommended a fantastic, graphic style over a naturalistic one.
+            With a violent and insane authority figure as its antagonist, the film expresses the theme of brutal and irrational authority.
+            Considered a classic, it helped draw worldwide attention to the artistic merit of German cinema and had a major influence on American films, particularly in the genres of horror and film noir.
+        </div>
+    </div>
+</body>
+</html>
